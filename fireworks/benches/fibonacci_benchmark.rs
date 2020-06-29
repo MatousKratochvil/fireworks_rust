@@ -1,7 +1,13 @@
 use criterion::{black_box, Criterion};
 use fireworks::*;
 
-
-pub fn criterion_benchmark(c: &mut Criterion) {
-    c.bench_function("fib 20", |b| b.iter(|| fibonacci::fibonacci(black_box(20))));
+macro_rules! benchmark {
+    ($func_name:ident, $name:literal, $fn_impl:expr) => {
+        pub fn $func_name(c: &mut Criterion) {
+            c.bench_function($name, |b| b.iter($fn_impl));
+        }
+    };
 }
+
+
+benchmark!(fibonnaci_bench, "fib 20", || fibonacci::fibonacci(black_box(80)));
