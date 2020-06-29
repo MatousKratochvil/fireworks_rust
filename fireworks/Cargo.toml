@@ -12,6 +12,10 @@ ggez = "*"
 [dev-dependencies]
 criterion = "*"
 
+[[bench]]
+name = "fireworks_benchmarks"
+harness = false
+
 [profile.bench]
 opt-level = 3
 lto = true
