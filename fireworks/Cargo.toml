@@ -1,0 +1,22 @@
+[package]
+name = "fireworks"
+version = "0.1.0"
+authors = ["Matous Kratochvil <matous.B89@live.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+criterion = "*"
+
+[profile.bench]
+opt-level = 3
+lto = true
+
+[profile.release]
+opt-level = 3
+lto = true
+
+[profile.dev]
+opt-level = 0
+lto = false
