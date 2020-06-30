@@ -15,6 +15,9 @@ criterion = "*"
 name = "fireworks_benchmarks"
 harness = false
 
+[[test]]
+name = "fireworks_tests"
+
 [profile.bench]
 opt-level = 3
 lto = true
