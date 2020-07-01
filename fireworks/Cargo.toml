@@ -12,11 +12,11 @@ edition = "2018"
 criterion = "*"
 
 [[bench]]
-name = "fireworks_benchmarks"
+name = "main_benchmarks"
 harness = false
 
 [[test]]
-name = "fireworks_tests"
+name = "main_tests"
 
 [profile.bench]
 opt-level = 3
